@@ -33,13 +33,13 @@ export default class Calendar extends React.Component {
 	}
 
 	confirmAdd = () => {
-		var date2 = this.state.datePicked
-  		var res = (date2.toString()).split(" ");
-		var date = res[0] + ' ' + res[1] + ' ' + res[2] + ' ' + res[3]
-		if((date) === '') {
+		var date = this.state.datePicked;
+		if((date) === '' || date === undefined) {
 			alert('Please select a date before continuing');
 		} else {
-			this.props.handleAction('datePicked', date, 'LessonAddSuccess')
+	  		var res = (date.toString()).split(" ");
+			var parsedDate = res[0] + ' ' + res[1] + ' ' + res[2] + ' ' + res[3]
+			this.props.handleAction('datePicked', parsedDate, 'LessonAddSuccess')
 		}
 	}
 

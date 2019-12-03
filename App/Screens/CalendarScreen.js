@@ -24,7 +24,7 @@ export default class CalendarScreen extends React.Component {
 		return (
 			<SafeAreaView style={styles.container}>
 				<Header openDrawer = {this.props.navigation.toggleDrawer} navigate = {this.props.navigation.navigate} />
-				<Text style={styles.title} ><Text style={{fontWeight: 'bold'}}>Add</Text> this lesson to your course calendar</Text>
+				<Text style={styles.title} >Check your<Text style={{fontWeight: 'bold'}}> lesson calendar</Text></Text>
 				<CalendarPicker
 					style = {styles.calendar}
 					selectedDayColor = {Colors.lg1}

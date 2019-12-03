@@ -120,7 +120,7 @@ export default class LessonReview extends Component {
 
 	render() {
 		return (
-			<View>
+			<View style={styles.container}>
 				<TouchableWithoutFeedback onPress={() => this.toggleModal} >
 					<Modal
 			          	isVisible={this.state.isModalVisible}
